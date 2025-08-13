@@ -1,0 +1,51 @@
+# Node.js dependencies
+
+node\_modules/
+
+# Playwright test results
+
+test-results/
+
+# Playwright videos and screenshots
+
+\*\*/*.webm
+\*\*/*.png
+\*\*/*.jpg
+\*\*/*.mp4
+
+# Playwright trace files
+
+\*\*/\*.zip
+
+# Logs
+
+logs
+*.log
+npm-debug.log*
+yarn-debug.log\*
+yarn-error.log\*
+
+# OS generated files
+
+.DS\_Store
+Thumbs.db
+
+# Environment files
+
+.env
+.env.local
+.env.\*.local
+
+# Editor directories and files
+
+.vscode/
+.idea/
+\*.suo
+*.ntvs*
+\*.njsproj
+\*.sln
+\*.sw?
+
+# Optional: coverage reports
+
+coverage/

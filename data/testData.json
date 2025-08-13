@@ -1,0 +1,31 @@
+{
+  "validUser": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "telephone": "1234567890",
+    "password": "Password123!"
+  },
+  "invalidEmailUser": {
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "email": "invalid-email-format",
+    "telephone": "0987654321",
+    "password": "Password123!"
+  },
+  "passwordMismatchUser": {
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "email": "alice.johnson@example.com",
+    "telephone": "1112223333",
+    "password": "Password123!",
+    "confirmPassword": "Password321!"
+  },
+  "emptyFieldsUser": {
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "telephone": "",
+    "password": ""
+  }
+}
