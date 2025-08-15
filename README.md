@@ -60,8 +60,8 @@ _______________________________________
 
 **1️⃣ Clone Repo**
 ```bash
-git clone https://github.com/your-username/playwright-automation.git
-cd playwright-automation
+git clone https://github.com/menahilnadeem08/Playwright-Test-automation
+cd Playwright-Test-automation
 ```
 
 **2️⃣ Install Dependencies**
