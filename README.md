@@ -96,7 +96,38 @@ ________________________________________
 |---------|-------------|
 | `npm run test:opencart:qa` | Run OpenCart QA suite |
 | `npm run test:internet:dev` | Run Internet app QA suite |
+### 🔹 1. Smoke Tests
+Run all tests annotated with **@smoke**:
 
+**Using npm script (recommended):**
+```bash
+npm run test:smoke:dev
+```
+
+**Direct Playwright command:**
+```bash
+npx playwright test --grep "@smoke"
+```
+### 🔹 2. Regression Tests
+Run all tests annotated with **@regression**:
+
+**Using npm script (recommended):**
+```bash
+npm run test:regression:dev
+```
+
+**Direct Playwright command:**
+```bash
+npx playwright test --grep "@regression"
+```
+
+### 🔹 3. Multiple Tags
+Run both smoke and regression tests:
+```bash
+npx playwright test --grep "@smoke|@regression"
+```
+
+---
 _______________________________________
 
 ## 📊 Reports & Screenshots
@@ -157,6 +188,30 @@ use: {
   navigationTimeout: 60000,
   actionTimeout: 30000
 }
+
+This project uses **Playwright** for end-to-end test automation with support for **tag-based execution**  
+(`@smoke` for quick checks, `@regression` for full coverage).
+
+---
+
+## 📌 Test Tags Overview
+
+| Tag          | Purpose                                        | Typical Frequency |
+|--------------|------------------------------------------------|-------------------|
+| `@smoke`     | Critical-path tests to validate core features  | Every commit      |
+| `@regression`| Comprehensive test coverage                    | Before release    |
+
+## 📊 Test Execution Flow
+
+```mermaid
+flowchart TD
+    A[Developer pushes code] --> B[CI/CD Pipeline starts]
+    B --> C[Run @smoke tests first]
+    C -->|Pass| D[Run @regression tests]
+    C -->|Fail| E[Stop pipeline & fix issues]
+```
+
+
 ## 👩‍💻 Author
 **Menahil** – Software Engineer | QA Automation Engineer in Training  
 📧 Email: menahilnadeem08@gmail.com  
