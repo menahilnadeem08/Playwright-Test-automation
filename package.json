@@ -7,7 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:update-snapshots": "playwright test --update-snapshots",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test:internet:dev": "cross-env ENV=dev APP=theInternet npx playwright test",
+    "test:internet:qa": "cross-env ENV=qa APP=theInternet npx playwright test",
+    "test:internet:prod": "cross-env ENV=prod APP=theInternet npx playwright test",
+    "test:opencart:dev": "cross-env ENV=dev APP=opencart npx playwright test",
+    "test:opencart:qa": "cross-env ENV=qa APP=opencart npx playwright test",
+    "test:opencart:prod": "cross-env ENV=prod APP=opencart npx playwright test"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +23,9 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.33.0",
     "@playwright/test": "^1.54.2",
+    "cross-env": "^10.0.0",
     "csv-parse": "^6.1.0",
+    "dotenv": "^17.2.1",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-playwright": "^2.2.2",
@@ -26,6 +34,7 @@
     "prettier": "^3.6.2"
   },
   "dependencies": {
+    "axe-core": "^4.10.3",
     "grep": "^0.1.0",
     "playwright-extra": "^4.3.6",
     "puppeteer-extra": "^3.3.6",
