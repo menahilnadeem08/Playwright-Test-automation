@@ -13,7 +13,9 @@
     "test:internet:prod": "cross-env ENV=prod APP=theInternet npx playwright test",
     "test:opencart:dev": "cross-env ENV=dev APP=opencart npx playwright test",
     "test:opencart:qa": "cross-env ENV=qa APP=opencart npx playwright test",
-    "test:opencart:prod": "cross-env ENV=prod APP=opencart npx playwright test"
+    "test:opencart:prod": "cross-env ENV=prod APP=opencart npx playwright test",
+    "test:smoke:dev": "cross-env ENV=dev APP=theInternet npx playwright test --grep \"@smoke\"",
+    "test:regression:dev": "cross-env ENV=dev APP=theInternet npx playwright test --grep \"@regression\""
   },
   "keywords": [],
   "author": "",
@@ -34,6 +36,7 @@
     "prettier": "^3.6.2"
   },
   "dependencies": {
+    "@axe-core/playwright": "^4.10.2",
     "axe-core": "^4.10.3",
     "grep": "^0.1.0",
     "playwright-extra": "^4.3.6",

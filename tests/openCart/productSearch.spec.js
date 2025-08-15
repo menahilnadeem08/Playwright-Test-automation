@@ -5,7 +5,7 @@ test.describe.parallel('OpenCart Product Search & Browse', () => {
   test('Search existing product and verify results', async ({ page }) => {
     const productPage = new ProductPage(page);
 
-    await productPage.navigate('https://demo.opencart.com/');
+    await productPage.navigate('/');
     await productPage.searchProduct('MacBook');
 
     expect(await productPage.isProductListVisible()).toBeTruthy();
@@ -20,7 +20,7 @@ test.describe.parallel('OpenCart Product Search & Browse', () => {
   test('Apply category filter and check products', async ({ page }) => {
     const productPage = new ProductPage(page);
 
-    await productPage.navigate('https://demo.opencart.com/');
+    await productPage.navigate('/');
     await productPage.applyCategoryFilter('Desktops');
 
     expect(await productPage.isProductListVisible()).toBeTruthy();

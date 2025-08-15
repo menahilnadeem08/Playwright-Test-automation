@@ -6,7 +6,7 @@ test.describe('OpenCart Registration Flow', () => {
     test('Register new user successfully', async ({ page }) => {
         const registrationPage = new RegistrationPage(page);
 
-        await registrationPage.navigate('https://demo.opencart.com/index.php?route=account/register');
+        await registrationPage.navigate('/index.php?route=account/register');
 
         // Use unique user from testData or generate dynamically
         const user = users.validUser;

@@ -7,7 +7,7 @@ import { runAxeAnalysis } from '../../../utils/axeHelper.js';
 import { HerokuLoginPage } from '../../../pages/internet/DataDrivenTesting/LoginPage.js';
 import { saveViolations } from '../../../utils/saveVoilations.js';
 
-test.describe.only('Accessibility Tests - The Internet', () => {
+test.describe('Accessibility Tests - The Internet', () => {
 
 
 

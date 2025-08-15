@@ -8,7 +8,7 @@ test.describe('OpenCart Shopping Cart & Checkout', () => {
     const cartPage = new CartPage(page);
 
     // Step 1: Add product to cart
-    await productPage.navigate('https://demo.opencart.com/');
+    await productPage.navigate('/');
     await productPage.searchProduct('MacBook');
     await productPage.openProductDetails(0);
     await page.click('#button-cart');
