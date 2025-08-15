@@ -1,6 +1,9 @@
-# Playwright-Test-automation
-Test automation for internet-app and open cart demo
-This repository contains automated end-to-end tests for The Internet website using Playwright and JavaScript.
+Playwright JS Automation Project: OpenCart & The Internet App
+Overview
+This project is a Playwright-based automation framework implemented in JavaScript for testing two web applications:
+1.	OpenCart – E-commerce platform for testing shopping workflows.
+2.	The Internet App – A sample app used for practicing UI automation scenarios (e.g., Dynamic Controls, File Downloads, Basic Auth, Context Menus).
+
 ________________________________________
 Table of Contents
 •	Project Structure
@@ -68,6 +71,28 @@ Test Reports
 npx playwright show-report
 •	Playwright automatically saves screenshots and videos for failed tests in test-results/.
 ________________________________________
+Contributing
+1.	Fork the repository.
+2.	Create a new feature branch:
+git checkout -b feature/YourFeature
+3.	Commit your changes:
+git commit -m "Add new feature"
+4.	Push to your branch and open a Pull Request.
+________________________________________
+Tech Stack
+•	Language: JavaScript (ES6+)
+•	Automation Tool: Playwright
+•	Test Runner: Playwright Test
+•	Browser Support: Chromium, Firefox, WebKit
+•	Utilities: Node.js, npm
+________________________________________
+Architecture Decisions & Design Patterns
+•	Page Object Model (POM): Each page has its own class with reusable methods.
+•	Utility Functions: Common functions like waits, retries, and file handling are centralized.
+•	Error Handling: Custom retry mechanisms and comprehensive logging for flaky elements.
+•	Separation of Concerns: Tests, pages, and utilities are organized in separate folders.
+_______________________________________
+
 Notes
 •	This project uses Page Object Model for maintainable and reusable test code.
 •	Make sure you have a stable internet connection when running tests because the website is hosted on Herokuapp.
