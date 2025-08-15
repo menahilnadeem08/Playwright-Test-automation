@@ -1,4 +1,3 @@
-import { expect } from '@playwright/test';
 import { BasePage } from '../base/BasePage.js';
 import { logInfo } from '../../utils/logger.js';
 import { retryAction } from '../../utils/retryUtils.js';
