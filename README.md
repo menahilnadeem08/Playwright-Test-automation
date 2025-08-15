@@ -1,8 +1,12 @@
-Playwright JS Automation Project: OpenCart & The Internet App
-Overview
-This project is a Playwright-based automation framework implemented in JavaScript for testing two web applications:
-1.	OpenCart – E-commerce platform for testing shopping workflows.
-2.	The Internet App – A sample app used for practicing UI automation scenarios (e.g., Dynamic Controls, File Downloads, Basic Auth, Context Menus).
+# 🚀 Playwright JavaScript Automation Testing Suite
+
+![Build Status](https://img.shields.io/github/actions/workflow/status/your-username/playwright-automation/deploy.yml?style=for-the-badge)
+![Playwright](https://img.shields.io/badge/Framework-Playwright-2D3748?style=for-the-badge&logo=playwright)
+![Node.js](https://img.shields.io/badge/Node.js-16+-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+
+> A complete **Playwright JavaScript** automation project for **The Internet (Heroku App)** and **OpenCart** — featuring **POM architecture**, **custom utilities**, **Axe accessibility checks**, and **CI/CD pipelines** for **Heroku** & **Docker**.
 
 ________________________________________
 ## 📚 Table of Contents
