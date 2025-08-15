@@ -3,8 +3,9 @@ import { HerokuLoginPage } from '../../../pages/internet/DataDrivenTesting/Login
 import loginData from '../../../data/herokuLogin.json';
 
 
-test.describe('Heroku Login - Data Driven', () => {
+test.describe('@smoke Heroku Login - Data Driven', () => {
   loginData.forEach(({ username, password, expected }) => {
+    
     test(`Login test with ${username}`, async ({ page }) => {
       const loginPage = new HerokuLoginPage(page);
       await loginPage.navigate('/login');
@@ -19,3 +20,4 @@ test.describe('Heroku Login - Data Driven', () => {
     });
   });
 });
+

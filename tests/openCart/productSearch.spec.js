@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const ProductPage = require('../../pages/opencart/ProductPage');
 
-test.describe('OpenCart Product Search & Browse', () => {
+test.describe.parallel('OpenCart Product Search & Browse', () => {
   test('Search existing product and verify results', async ({ page }) => {
     const productPage = new ProductPage(page);
 

@@ -1,6 +1,6 @@
 import { test, expect } from '../../../fixtures/dynamicControlFixture.js';
 
-test.describe('Dynamic Controls', () => {
+test.describe.parallel('Dynamic Controls', () => {
 
   test('Enable and disable input', async ({ dynamicControlsPage }) => {
     await dynamicControlsPage.enableInput();

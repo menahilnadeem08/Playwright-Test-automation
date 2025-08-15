@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { DynamicLoadingPage } from '../../../pages/internet/DynamicLoadingPage.js';
 
-test.describe('Dynamic Loading', () => {
+test.describe.parallel('Dynamic Loading', () => {
   test('1: Hidden Element', async ({ page }) => {
     const dynamicPage = new DynamicLoadingPage(page);
     const text = await dynamicPage.loadExample1();

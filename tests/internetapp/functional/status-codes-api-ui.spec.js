@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 const { StatusCodesPage } = require('../../../pages/internet/StatusCodesPage');
 
-test.describe('Herokuapp API + UI Integration', () => {
+test.describe.parallel('Herokuapp API + UI Integration', () => {
   test('Validate 200 status code via API and UI', async ({ page }) => {
     const statusPage = new StatusCodesPage(page);
     await statusPage.navigate('/status_codes');
