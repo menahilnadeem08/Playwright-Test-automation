@@ -1,5 +1,13 @@
 import { BasePage } from '../base/BasePage.js';
 
+/**
+ * Description placeholder
+ *
+ * @export
+ * @class DynamicLoadingPage
+ * @typedef {DynamicLoadingPage}
+ * @extends {BasePage}
+ */
 export class DynamicLoadingPage extends BasePage {
   constructor(page) {
     super(page);

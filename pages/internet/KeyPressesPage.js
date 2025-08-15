@@ -1,5 +1,13 @@
 import { BasePage } from '../base/BasePage.js';
 
+/**
+ * Description placeholder
+ *
+ * @export
+ * @class KeyPressesPage
+ * @typedef {KeyPressesPage}
+ * @extends {BasePage}
+ */
 export class KeyPressesPage extends BasePage {
   constructor(page) {
     super(page);

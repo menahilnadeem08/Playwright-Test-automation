@@ -16,7 +16,9 @@ test-results/
 # Playwright trace files
 
 \*\*/\*.zip
-
+pupetter.js
+puppeteer-extra.js
+env.js
 # Logs
 
 logs

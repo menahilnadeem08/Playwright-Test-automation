@@ -1,5 +1,13 @@
 import { BasePage } from '../base/BasePage.js';
 
+/**
+ * Description placeholder
+ *
+ * @export
+ * @class SecureFileDownloadPage
+ * @typedef {SecureFileDownloadPage}
+ * @extends {BasePage}
+ */
 export class SecureFileDownloadPage extends BasePage {
   constructor(page) {
     super(page);

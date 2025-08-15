@@ -1,5 +1,13 @@
 import { BasePage } from '../base/BasePage.js';
 
+/**
+ * Description placeholder
+ *
+ * @export
+ * @class DropdownPage
+ * @typedef {DropdownPage}
+ * @extends {BasePage}
+ */
 export class DropdownPage extends BasePage {
   constructor(page) {
     super(page);

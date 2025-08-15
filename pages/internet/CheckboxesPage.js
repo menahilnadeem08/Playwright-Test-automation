@@ -1,5 +1,13 @@
 import { BasePage } from '../base/BasePage.js';
 
+/**
+ * Description placeholder
+ *
+ * @export
+ * @class CheckboxesPage
+ * @typedef {CheckboxesPage}
+ * @extends {BasePage}
+ */
 export class CheckboxesPage extends BasePage {
   constructor(page) {
     super(page);

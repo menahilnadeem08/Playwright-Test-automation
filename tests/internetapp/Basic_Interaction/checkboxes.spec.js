@@ -1,12 +1,8 @@
-import { test, expect } from '@playwright/test';
-import { CheckboxesPage } from '../../../pages/internet/CheckboxesPage.js';
+import { test, expect } from '../../../fixtures/checkBox.js';
 
-test('Verify checkbox state changes and persistence', async ({ page }) => {
-  const checkboxesPage = new CheckboxesPage(page);
-  await checkboxesPage.navigate('/checkboxes');
-  
-
+test('Verify checkbox state changes and persistence', async ({ checkboxesPage }) => {
   const initialState = await checkboxesPage.isFirstCheckboxChecked();
+  
   await checkboxesPage.toggleFirstCheckbox();
   const newState = await checkboxesPage.isFirstCheckboxChecked();
 

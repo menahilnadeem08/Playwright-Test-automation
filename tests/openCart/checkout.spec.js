@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const ProductPage = require('../../pages/opencart/ProductPage');
 const CartPage = require('../../pages/opencart/CartPage');
 
-test.describe.only('OpenCart Shopping Cart & Checkout', () => {
+test.describe('OpenCart Shopping Cart & Checkout', () => {
   test('Add product to cart and complete checkout simulation', async ({ page }) => {
     const productPage = new ProductPage(page);
     const cartPage = new CartPage(page);

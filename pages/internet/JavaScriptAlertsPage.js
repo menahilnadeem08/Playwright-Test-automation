@@ -1,5 +1,13 @@
 import { BasePage } from '../base/BasePage.js';
 
+/**
+ * Description placeholder
+ *
+ * @export
+ * @class JavaScriptAlertsPage
+ * @typedef {JavaScriptAlertsPage}
+ * @extends {BasePage}
+ */
 export class JavaScriptAlertsPage extends BasePage {
   constructor(page) {
     super(page);

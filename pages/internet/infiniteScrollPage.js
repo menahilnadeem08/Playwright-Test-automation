@@ -1,4 +1,13 @@
 import { BasePage } from '../base/BasePage.js';
+
+/**
+ * Description placeholder
+ *
+ * @export
+ * @class InfiniteScrollPage
+ * @typedef {InfiniteScrollPage}
+ * @extends {BasePage}
+ */
 export class InfiniteScrollPage extends BasePage {
   constructor(page) {
     super(page);
@@ -20,7 +29,7 @@ async waitForMoreParagraphs(previousCount) {
     await this.scrollToBottom();
     await this.page.waitForTimeout(2000); // give time to load
     const currentCount = await this.getParagraphCount();
-    if (currentCount > previousCount) return;
+    if (currentCount > previousCount) {return;}
   }
   throw new Error('No more paragraphs loaded');
 }

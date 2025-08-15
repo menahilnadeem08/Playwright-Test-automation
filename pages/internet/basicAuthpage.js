@@ -1,4 +1,13 @@
 import { BasePage } from '../base/BasePage.js';
+
+/**
+ * Description placeholder
+ *
+ * @export
+ * @class BasicAuthPage
+ * @typedef {BasicAuthPage}
+ * @extends {BasePage}
+ */
 export class BasicAuthPage extends BasePage {
   constructor(page) {
     super(page);

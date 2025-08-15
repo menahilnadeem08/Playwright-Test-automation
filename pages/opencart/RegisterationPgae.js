@@ -1,5 +1,12 @@
 import { BasePage } from '../base/BasePage.js';
 
+/**
+ * Description placeholder
+ *
+ * @class RegistrationPage
+ * @typedef {RegistrationPage}
+ * @extends {BasePage}
+ */
 class RegistrationPage extends BasePage {
   constructor(page) {
     super(page);
@@ -17,7 +24,7 @@ class RegistrationPage extends BasePage {
   async registerUser(user) {
     await this.page.waitForLoadState('domcontentloaded');
     await this.page.waitForSelector('text=My Account', { timeout: 600000 }),
-    await this.page.waitForSelector('text=Verifying you are human', { state: 'hidden', timeout: 600000 })
+    await this.page.waitForSelector('text=Verifying you are human', { state: 'hidden', timeout: 600000 });
     await this.type(this.firstNameInput, user.firstName);
     await this.type(this.lastNameInput, user.lastName);
     await this.type(this.emailInput, user.email);

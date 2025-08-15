@@ -2,6 +2,14 @@
 import { expect } from '@playwright/test';
 import { BasePage } from '../base/BasePage.js';
 
+/**
+ * Description placeholder
+ *
+ * @export
+ * @class DynamicControlsPage
+ * @typedef {DynamicControlsPage}
+ * @extends {BasePage}
+ */
 export class DynamicControlsPage extends BasePage {
   constructor(page) {
     super(page);

@@ -1,5 +1,13 @@
 import { BasePage } from '../base/BasePage.js';
 
+/**
+ * Description placeholder
+ *
+ * @export
+ * @class DragAndDropPage
+ * @typedef {DragAndDropPage}
+ * @extends {BasePage}
+ */
 export class DragAndDropPage extends BasePage {
   constructor(page) {
     super(page);

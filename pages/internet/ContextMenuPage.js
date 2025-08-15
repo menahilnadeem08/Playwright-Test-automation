@@ -7,7 +7,7 @@ export class ContextMenuPage extends BasePage {
   }
 
   async rightClickHotspot() {
-    this.page.once('dialog', async dialog => await dialog.accept());
+    // Just perform right-click, do NOT handle dialog here
     await this.page.click(this.hotspot, { button: 'right' });
   }
 }

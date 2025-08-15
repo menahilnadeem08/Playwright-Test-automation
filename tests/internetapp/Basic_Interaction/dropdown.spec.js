@@ -1,10 +1,7 @@
-import { test, expect } from '@playwright/test';
-import { DropdownPage } from '../../../pages/internet/DropdownPage.js';
+import { test, expect } from '../../../fixtures/dropDownFixture.js';
 
-test('Select single option from dropdown', async ({ page }) => {
-  const dropdownPage = new DropdownPage(page);
-  await dropdownPage.navigate('/dropdown');
 
+test('Select single option from dropdown', async ({ dropdownPage }) => {
   const selected = await dropdownPage.selectOptionByValue('1');
   expect(selected).toBe('Option 1');
 });

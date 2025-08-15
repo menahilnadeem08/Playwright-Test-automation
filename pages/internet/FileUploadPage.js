@@ -1,5 +1,13 @@
 import { BasePage } from '../base/BasePage.js';
 
+/**
+ * Description placeholder
+ *
+ * @export
+ * @class FileUploadPage
+ * @typedef {FileUploadPage}
+ * @extends {BasePage}
+ */
 export class FileUploadPage extends BasePage {
   constructor(page) {
     super(page);

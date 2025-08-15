@@ -1,5 +1,13 @@
 import { BasePage } from '../base/BasePage.js';
 
+/**
+ * Description placeholder
+ *
+ * @export
+ * @class HoversPage
+ * @typedef {HoversPage}
+ * @extends {BasePage}
+ */
 export class HoversPage extends BasePage {
   constructor(page) {
     super(page);

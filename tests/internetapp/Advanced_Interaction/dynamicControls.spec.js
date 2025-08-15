@@ -1,15 +1,11 @@
-import { test, expect } from '@playwright/test';
-import { DynamicControlsPage } from '../../../pages/internet/dynamicControlsPage.js';
+import { test, expect } from '../../../fixtures/dynamicControlFixture.js';
 
 test.describe('Dynamic Controls', () => {
-  test('Enable and disable input', async ({ page }) => {
-    const dynamicControls = new DynamicControlsPage(page);
-    await dynamicControls.navigate('/dynamic_controls');
+  test('Enable and disable input', async ({ dynamicControlsPage }) => {
+    await dynamicControlsPage.clickEnable();
+    await expect(dynamicControlsPage.inputField).toBeEnabled();
 
-    await dynamicControls.clickEnable();
-    await expect(dynamicControls.inputField).toBeEnabled();
-
-    await dynamicControls.clickDisable();
-    await expect(dynamicControls.inputField).toBeDisabled();
+    await dynamicControlsPage.clickDisable();
+    await expect(dynamicControlsPage.inputField).toBeDisabled();
   });
 });

@@ -1,13 +1,32 @@
+
+/**
+ * Description placeholder
+ *
+ * @export
+ * @class BasePage
+ * @typedef {BasePage}
+ */
 export class BasePage {
   constructor(page) {
     this.page = page;
   }
-async navigate(url) {
-  await this.page.goto(url, {
-    timeout: 600000,
-    waitUntil: 'domcontentloaded'  
-  });
-}
+  async navigate(url) {
+    await this.page.goto(url, {
+      timeout: 600000,
+      waitUntil: 'domcontentloaded'
+    });
+  }
+  async hideDynamic(...selectors) {
+    for (const s of selectors) {
+      const locator = this.page.locator(s);
+      await locator.evaluateAll((els) => {
+        els.forEach(el => {
+          el.style.visibility = 'hidden';
+          el.style.animation = 'none';
+        });
+      });
+    }
+  }
 
 
   async click(locator) {
