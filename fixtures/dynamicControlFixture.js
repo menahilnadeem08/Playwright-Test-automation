@@ -1,15 +1,13 @@
 import base from '@playwright/test';
-import { DynamicControlsPage } from '../pages/internet/dynamicControlsPage';
+import { DynamicControlsPage } from '../pages/internet/dynamicControlsPage.js';
 
 /**
- * Description placeholder
- *
- * @type {*}
+ * Dynamic Controls fixture
  */
 export const test = base.extend({
   dynamicControlsPage: async ({ page }, use) => {
     const dynamicControls = new DynamicControlsPage(page);
-    await dynamicControls.navigate('/dynamic_controls'); 
+    await dynamicControls.navigateToPage();
     await use(dynamicControls);
   }
 });
