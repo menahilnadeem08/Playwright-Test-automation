@@ -1,6 +1,21 @@
 # Node.js dependencies
-
+downloads/
 node\_modules/
+# Ignore environment files
+.env*
+
+# Ignore reports
+reports/
+playwright-report/
+
+# Ignore snapshots
+tests/**/*.png
+# Ignore Playwright reports
+playwright-report/
+
+# Ignore Chromium downloads
+downloads/chromium/
+
 
 # Playwright test results
 
