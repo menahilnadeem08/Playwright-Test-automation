@@ -5,16 +5,17 @@ This project is a Playwright-based automation framework implemented in JavaScrip
 2.	The Internet App – A sample app used for practicing UI automation scenarios (e.g., Dynamic Controls, File Downloads, Basic Auth, Context Menus).
 
 ________________________________________
-Table of Contents
-•	Project Structure
-•	Installation
-•	Running Tests
-•	Running Specific Tests
-•	Test Reports
-•	Notes
+## 📚 Table of Contents
+- [📂 Project Structure](#-project-structure)
+- [✨ Features & Enhancements](#-features--enhancements)
+- [🚀 Setup & Installation](#-setup--installation)
+- [🔄 CI/CD Integration](#-cicd-integration)
+- [🧪 Running Tests](#-running-tests)
+- [📊 Reports & Screenshots](#-reports--screenshots)
+- [🛠 Tech Stack](#-tech-stack)
+- [👩‍💻 Author](#-author)
 ________________________________________
-Project Structure
-.
+## 📂 Project Structure.
 ├── tests/
 │   ├── internetapp/
 │   │   ├── Basic_Interaction/
@@ -37,24 +38,80 @@ Project Structure
 •	pages/ – Page Object Model files containing reusable functions.
 •	playwright.config.js – Playwright configuration file.
 ________________________________________
-Installation
-1.	Clone the repository:
-git clone <repository_url>
-cd <repository_folder>
-2.	Install dependencies:
+
+## ✨ Features & Enhancements
+- **✅ POM (Page Object Model)** – Clear separation of locators & test logic.
+- **✅ Custom Utilities**
+  - Retry logic for flaky steps
+  - Wait helpers (`waitForEnabled`, `waitForVisible`, `waitForDetached`)
+  - Popup handler for new browser windows/tabs
+  - Logger for centralized test tracking
+  - File helper for download directories
+- **✅ Accessibility Testing** – WCAG 2.1 AA compliance checks with Axe.
+- **✅ Execution Profiles** – Smoke, Regression, Full Suite.
+- **✅ Cross-Browser Support** – Chromium, Firefox, WebKit.
+- **✅ CI/CD Ready** – GitHub Actions with Heroku & Docker deployments.
+_______________________________________
+## 🚀 Setup & Installation
+
+**1️⃣ Clone Repo**
+```bash
+git clone https://github.com/your-username/playwright-automation.git
+cd playwright-automation
+```
+
+**2️⃣ Install Dependencies**
+```bash
 npm install
-3.	Install Playwright browsers:
-npx playwright install --with-deps
+```
+
+**3️⃣ Run Tests**
+```bash
+npm run test:opencart:qa
+npm run test:internetapp:dev
+```
+
+**4️⃣ View Report**
+```bash
+npx playwright show-report
+```
+
+---
+_______________________________________
+## 🔄 CI/CD Integration
+
+**GitHub Secrets Required**
+- `HEROKU_API_KEY`
+- `HEROKU_APP_NAME`
+- `DOCKERHUB_USERNAME`
+- `DOCKERHUB_TOKEN`
 ________________________________________
-Running Tests
-•	Run all tests:
-npx playwright test
-•	Run tests in headed mode to see the browser:
-npx playwright test --headed
-•	Run tests in specific browser:
-npx playwright test --project=firefox
-npx playwright test --project=chromium
-npx playwright test --project=webkit
+## 🧪 Running Tests
+
+| Command | Description |
+|---------|-------------|
+| `npm run test:opencart:qa` | Run OpenCart QA suite |
+| `npm run test:internet:dev` | Run Internet app QA suite |
+
+_______________________________________
+
+## 📊 Reports & Screenshots
+
+**📄 Playwright HTML Report**
+- Generated automatically after test execution.
+- View locally by running:
+```bash
+npx playwright show-report
+```
+- Opens in your default browser on **http://localhost:9323**.
+
+**♿ Accessibility Report**
+- Generated for each accessibility test.
+- Stored as **JSON files** in:  
+```
+reports/accessibility/*.json
+```
+- Contains details of any WCAG 2.1 AA violations.
 ________________________________________
 Running Specific Tests
 •	Run a single test file:
@@ -65,12 +122,7 @@ npx playwright test -g "Verify checkbox state changes and persistence"
 test.only('Test name', async ({ page }) => {
   // test code
 });
-________________________________________
-Test Reports
-•	HTML report:
-npx playwright show-report
-•	Playwright automatically saves screenshots and videos for failed tests in test-results/.
-________________________________________
+____________________________________
 Contributing
 1.	Fork the repository.
 2.	Create a new feature branch:
@@ -79,12 +131,12 @@ git checkout -b feature/YourFeature
 git commit -m "Add new feature"
 4.	Push to your branch and open a Pull Request.
 ________________________________________
-Tech Stack
-•	Language: JavaScript (ES6+)
-•	Automation Tool: Playwright
-•	Test Runner: Playwright Test
-•	Browser Support: Chromium, Firefox, WebKit
-•	Utilities: Node.js, npm
+## 🛠 Tech Stack
+- **Playwright** (JavaScript)
+- **Node.js** (>= 16.x)
+- **Axe-core** (Accessibility)
+- **GitHub Actions** (CI/CD)
+- **Docker** & **Heroku** (Deployment)
 ________________________________________
 Architecture Decisions & Design Patterns
 •	Page Object Model (POM): Each page has its own class with reusable methods.
@@ -101,4 +153,8 @@ use: {
   navigationTimeout: 60000,
   actionTimeout: 30000
 }
+## 👩‍💻 Author
+**Menahil** – Software Engineer | QA Automation Engineer in Training  
+📧 Email: menahilnadeem08@gmail.com  
+
 
