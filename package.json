@@ -15,7 +15,8 @@
     "test:opencart:qa": "cross-env ENV=qa APP=opencart npx playwright test",
     "test:opencart:prod": "cross-env ENV=prod APP=opencart npx playwright test",
     "test:smoke:dev": "cross-env ENV=dev APP=theInternet npx playwright test --grep \"@smoke\"",
-    "test:regression:dev": "cross-env ENV=dev APP=theInternet npx playwright test --grep \"@regression\""
+    "test:regression:dev": "cross-env ENV=dev APP=theInternet npx playwright test --grep \"@regression\"",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +33,8 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-playwright": "^2.2.2",
     "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
     "playwright-html-reporter": "^0.1.11",
     "prettier": "^3.6.2"
   },
@@ -42,5 +45,10 @@
     "playwright-extra": "^4.3.6",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
   }
 }
