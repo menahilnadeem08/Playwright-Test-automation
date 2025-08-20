@@ -1,4 +1,5 @@
-import { BasePage } from '../base/BasePage.js';
+// check comments
+import { BasePage } from "../base/BasePage.js";
 
 /**
  * Description placeholder
@@ -11,9 +12,9 @@ import { BasePage } from '../base/BasePage.js';
 export class FileUploadPage extends BasePage {
   constructor(page) {
     super(page);
-    this.fileInput = '#file-upload';
-    this.uploadButton = '#file-submit';
-    this.uploadedFiles = '#uploaded-files';
+    this.fileInput = "#file-upload";
+    this.uploadButton = "#file-submit";
+    this.uploadedFiles = "#uploaded-files";
   }
 
   async uploadFile(filePath) {
@@ -21,8 +22,7 @@ export class FileUploadPage extends BasePage {
     await this.click(this.uploadButton);
   }
 
-async getUploadedFileName() {
-  return (await this.page.locator('#uploaded-files').innerText()).trim();
-}
-
+  async getUploadedFileName() {
+    return (await this.page.locator("#uploaded-files").innerText()).trim();
+  }
 }

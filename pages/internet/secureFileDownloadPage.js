@@ -1,4 +1,5 @@
-import { BasePage } from '../base/BasePage.js';
+// check comments
+import { BasePage } from "../base/BasePage.js";
 
 /**
  * Description placeholder
@@ -11,9 +12,8 @@ import { BasePage } from '../base/BasePage.js';
 export class SecureFileDownloadPage extends BasePage {
   constructor(page) {
     super(page);
-    this.downloadLink = 'a[href*="download"]'; 
+    this.downloadLink = 'a[href*="download"]';
   }
-
 
   getDownloadLocatorByName(filename) {
     return `a:has-text("${filename}")`;
@@ -22,10 +22,9 @@ export class SecureFileDownloadPage extends BasePage {
   async clickDownloadAndWaitForFile(filename) {
     const linkSelector = this.getDownloadLocatorByName(filename);
     const [download] = await Promise.all([
-      this.page.waitForEvent('download'),
-      this.page.click(linkSelector)
+      this.page.waitForEvent("download"),
+      this.page.click(linkSelector),
     ]);
     return download;
   }
 }
-

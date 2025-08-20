@@ -1,14 +1,15 @@
-import { BasePage } from '../base/BasePage.js';
+// check comments
+import { BasePage } from "../base/BasePage.js";
 
 class ProductPage extends BasePage {
   constructor(page) {
     super(page);
     this.searchInput = 'input[name="search"]';
     this.searchButton = 'button[class*="btn-default"][type="button"]';
-    this.productList = '.product-layout';
-    this.productTitle = '.caption h4 a';
-    this.filterCategory = '#input-category'; // Example selector
-    this.filterButton = '#button-search';     // Apply filters
+    this.productList = ".product-layout";
+    this.productTitle = ".caption h4 a";
+    this.filterCategory = "#input-category"; // Example selector
+    this.filterButton = "#button-search"; // Apply filters
   }
 
   async searchProduct(productName) {

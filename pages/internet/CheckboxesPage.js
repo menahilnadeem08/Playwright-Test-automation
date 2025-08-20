@@ -1,4 +1,5 @@
-import { BasePage } from '../base/BasePage.js';
+// check comments
+import { BasePage } from "../base/BasePage.js";
 
 /**
  * Description placeholder
@@ -11,8 +12,8 @@ import { BasePage } from '../base/BasePage.js';
 export class CheckboxesPage extends BasePage {
   constructor(page) {
     super(page);
-    this.checkbox1 = '#checkboxes input:nth-of-type(1)';
-    this.checkbox2 = '#checkboxes input:nth-of-type(2)';
+    this.checkbox1 = "#checkboxes input:nth-of-type(1)";
+    this.checkbox2 = "#checkboxes input:nth-of-type(2)";
   }
 
   async toggleFirstCheckbox() {

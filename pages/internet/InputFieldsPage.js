@@ -1,4 +1,5 @@
-import { BasePage } from '../base/BasePage.js';
+// check comments
+import { BasePage } from "../base/BasePage.js";
 
 /**
  * Description placeholder

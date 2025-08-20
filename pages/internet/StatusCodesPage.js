@@ -1,4 +1,4 @@
-import { BasePage } from '../base/BasePage.js';
+import { BasePage } from "../base/BasePage.js";
 
 /**
  * Description placeholder
@@ -10,7 +10,7 @@ import { BasePage } from '../base/BasePage.js';
 class StatusCodesPage extends BasePage {
   constructor(page) {
     super(page);
-    this.statusLink = code => this.page.locator(`a:has-text("${code}")`);
+    this.statusLink = (code) => this.page.locator(`a:has-text("${code}")`);
   }
 
   async clickStatusCode(code) {

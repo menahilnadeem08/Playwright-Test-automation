@@ -1,7 +1,8 @@
 // tests/functional/status-codes-api-ui.spec.js
 const { test, expect } = require("@playwright/test");
-const { StatusCodesPage } = require("../../../pages/internet/StatusCodesPage");
-
+const {
+  StatusCodesPage,
+} = require("../../../pages/internet/statusCodesPage.js");
 test.describe.parallel("Herokuapp API + UI Integration", () => {
   test("Validate 200 status code via API and UI", async ({ page }) => {
     const statusPage = new StatusCodesPage(page);

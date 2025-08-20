@@ -1,4 +1,5 @@
-import { BasePage } from '../base/BasePage.js';
+// check comments
+import { BasePage } from "../base/BasePage.js";
 
 /**
  * Description placeholder
@@ -11,7 +12,7 @@ import { BasePage } from '../base/BasePage.js';
 export class InfiniteScrollPage extends BasePage {
   constructor(page) {
     super(page);
-    this.paragraphSelector = '.jscroll-added';
+    this.paragraphSelector = ".jscroll-added";
   }
 
   async getParagraphCount() {
@@ -24,14 +25,15 @@ export class InfiniteScrollPage extends BasePage {
     });
   }
 
-async waitForMoreParagraphs(previousCount) {
-  for (let i = 0; i < 5; i++) {
-    await this.scrollToBottom();
-    await this.page.waitForTimeout(2000); // give time to load
-    const currentCount = await this.getParagraphCount();
-    if (currentCount > previousCount) {return;}
+  async waitForMoreParagraphs(previousCount) {
+    for (let i = 0; i < 5; i++) {
+      await this.scrollToBottom();
+      await this.page.waitForTimeout(2000); // give time to load
+      const currentCount = await this.getParagraphCount();
+      if (currentCount > previousCount) {
+        return;
+      }
+    }
+    throw new Error("No more paragraphs loaded");
   }
-  throw new Error('No more paragraphs loaded');
-}
-
 }

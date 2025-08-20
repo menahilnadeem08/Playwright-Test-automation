@@ -1,0 +1,25 @@
+config:
+  target: "https://the-internet.herokuapp.com"
+  phases:
+    - duration: 60        # run test for 60 seconds
+      arrivalCount: 1000   # total 1000 users created across 60s
+  defaults:
+    headers:
+      Content-Type: application/x-www-form-urlencoded
+
+scenarios:
+  - name: "Login Test"
+    flow:
+      - post:
+          url: "/authenticate"
+          form:
+            username: "tomsmith"
+            password: "SuperSecretPassword!"
+          expect:
+            - statusCode: 303
+
+      - get:
+          url: "/secure"
+          expect:
+            - statusCode: 200
+            - content: "You logged into a secure area!"

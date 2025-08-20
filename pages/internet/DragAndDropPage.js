@@ -1,4 +1,5 @@
-import { BasePage } from '../base/BasePage.js';
+// check comments
+import { BasePage } from "../base/BasePage.js";
 
 /**
  * Description placeholder
@@ -11,8 +12,8 @@ import { BasePage } from '../base/BasePage.js';
 export class DragAndDropPage extends BasePage {
   constructor(page) {
     super(page);
-    this.columnA = '#column-a';
-    this.columnB = '#column-b';
+    this.columnA = "#column-a";
+    this.columnB = "#column-b";
   }
 
   async dragAtoB() {

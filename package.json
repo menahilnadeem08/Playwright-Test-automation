@@ -8,7 +8,7 @@
     "test:update-snapshots": "playwright test --update-snapshots",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test:internet:dev": "cross-env ENV=dev APP=theInternet npx playwright test",
+    "test:internet:dev": "cross-env ENV=dev APP=theInternet npx playwright test --update-snapshots",
     "test:internet:qa": "cross-env ENV=qa APP=theInternet npx playwright test",
     "test:internet:prod": "cross-env ENV=prod APP=theInternet npx playwright test",
     "test:opencart:dev": "cross-env ENV=dev APP=opencart npx playwright test",
@@ -16,6 +16,7 @@
     "test:opencart:prod": "cross-env ENV=prod APP=opencart npx playwright test",
     "test:smoke:dev": "cross-env ENV=dev APP=theInternet npx playwright test --grep \"@smoke\"",
     "test:regression:dev": "cross-env ENV=dev APP=theInternet npx playwright test --grep \"@regression\"",
+    "test:load": "artillery run --output results.json login-test.yml && node JmeterConsoleReport.js",
     "prepare": "husky"
   },
   "keywords": [],
@@ -42,9 +43,7 @@
     "@axe-core/playwright": "^4.10.2",
     "axe-core": "^4.10.3",
     "grep": "^0.1.0",
-    "playwright-extra": "^4.3.6",
-    "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2"
+    "playwright-extra": "^4.3.6"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [

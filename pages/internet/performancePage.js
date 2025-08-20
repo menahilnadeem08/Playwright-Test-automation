@@ -1,4 +1,5 @@
-import { BasePage } from '../base/BasePage.js';
+// check comments
+import { BasePage } from "../base/BasePage.js";
 
 /**
  * Description placeholder
@@ -8,10 +9,10 @@ import { BasePage } from '../base/BasePage.js';
  * @extends {BasePage}
  */
 class performancePage extends BasePage {
-    constructor(page) {
-        super(page);
-        this.heading = page.locator('h1');
-        this.examples = page.locator('#content a');
-    }
+  constructor(page) {
+    super(page);
+    this.heading = page.locator("h1");
+    this.examples = page.locator("#content a");
+  }
 }
 module.exports = { performancePage };

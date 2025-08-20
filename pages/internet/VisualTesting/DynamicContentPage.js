@@ -1,5 +1,6 @@
+// check comments
 
-const { BasePage } = require('../../base/BasePage');
+const { BasePage } = require("../../base/BasePage");
 
 /**
  * Description placeholder
@@ -11,8 +12,8 @@ const { BasePage } = require('../../base/BasePage');
 class DynamicContentPage extends BasePage {
   constructor(page) {
     super(page);
-    this.images = '#content .row img';
-    this.textBlocks = '#content .row .large-10';
+    this.images = "#content .row img";
+    this.textBlocks = "#content .row .large-10";
   }
 }
 
