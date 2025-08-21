@@ -17,6 +17,7 @@
     "test:smoke:dev": "cross-env ENV=dev APP=theInternet npx playwright test --grep \"@smoke\"",
     "test:regression:dev": "cross-env ENV=dev APP=theInternet npx playwright test --grep \"@regression\"",
     "test:load": "artillery run --output results.json login-test.yml && node JmeterConsoleReport.js",
+    "test:report": "node json-to-html-report.js",
     "prepare": "husky"
   },
   "keywords": [],
