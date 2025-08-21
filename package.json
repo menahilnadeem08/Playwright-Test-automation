@@ -16,9 +16,12 @@
     "test:opencart:prod": "cross-env ENV=prod APP=opencart npx playwright test",
     "test:smoke:dev": "cross-env ENV=dev APP=theInternet npx playwright test --grep \"@smoke\"",
     "test:regression:dev": "cross-env ENV=dev APP=theInternet npx playwright test --grep \"@regression\"",
-    "test:load": "artillery run --output results.json login-test.yml && node JmeterConsoleReport.js",
-    "test:report": "node json-to-html-report.js",
-    "prepare": "husky"
+    "test:load": "artillery run --output results.json login-test.yml && node Report_Script/JmeterConsoleReport.js",
+    "test:report": "node Report_Script/json-to-html-report.js",
+    "prepare": "husky",
+    "test:youtube:dev": "cross-env ENV=dev APP=youtube npx playwright test",
+    "test:youtube:qa": "cross-env ENV=qa APP=youtube npx playwright test",
+    "test:youtube:prod": "cross-env ENV=prod APP=youtube npx playwright test"
   },
   "keywords": [],
   "author": "",

@@ -1,4 +1,4 @@
- class CustomReporter {
+class CustomReporter {
   constructor() {
     this.passed = 0;
     this.failed = 0;
@@ -7,22 +7,22 @@
 
   // Called after each test finishes
   onTestEnd(test, result) {
-    if (result.status === 'passed') {
+    if (result.status === "passed") {
       this.passed++;
-    } else if (result.status === 'failed') {
+    } else if (result.status === "failed") {
       this.failed++;
-    } else if (result.status === 'skipped') {
+    } else if (result.status === "skipped") {
       this.skipped++;
     }
   }
 
   // Called once after all tests complete
   onEnd() {
-    console.log('----- Test Summary -----');
+    console.log("----- Test Summary -----");
     console.log(`Passed: ${this.passed}`);
     console.log(`Failed: ${this.failed}`);
     console.log(`Skipped: ${this.skipped}`);
-    console.log('------------------------');
+    console.log("------------------------");
 
     // Optionally, write these stats to a file:
     /*
@@ -38,4 +38,4 @@
   }
 }
 
-module.exports = CustomReporter; 
+module.exports = CustomReporter;

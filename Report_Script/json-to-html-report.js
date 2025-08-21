@@ -1,5 +1,11 @@
 const fs = require("fs");
 
+/**
+ * Description placeholder
+ *
+ * @type {*}
+ * it will convert result json properties to HTML
+ */
 const data = JSON.parse(fs.readFileSync("results.json", "utf-8"));
 
 const counters = data.aggregate?.counters || {};
@@ -61,5 +67,5 @@ const html = `
 `;
 
 // Write file
-fs.writeFileSync("jmeter-report.html", html, "utf-8");
+fs.writeFileSync("reports/jmeter-report.html", html, "utf-8");
 console.log("✅ HTML report generated: jmeter-report.html");

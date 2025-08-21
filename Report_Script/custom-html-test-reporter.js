@@ -25,7 +25,15 @@ class CustomHtmlReporter {
 
   onEnd(result) {
     const html = this.generateHtml();
-    fs.writeFileSync(this.outputFile, html, "utf-8");
+    const path = "reports";
+
+    // Make sure the folder exists
+    if (!fs.existsSync(path)) {
+      fs.mkdirSync(path);
+    }
+
+    // Save the file inside reports
+    fs.writeFileSync(`${path}/${this.outputFile}`, html, "utf-8");
     console.log(`\n✅ Custom HTML report saved at: ${this.outputFile}`);
   }
 
