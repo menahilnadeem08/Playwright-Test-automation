@@ -41,12 +41,20 @@ module.exports = defineConfig({
         open: "never",
       },
     ],
+
+    // Optional: Keep built-in HTML reporter as backup
+    [
+      "html",
+      {
+        outputFolder: "playwright-report",
+        open: "never",
+      },
+    ],
     // [
     //   '@artilleryio/playwright-reporter',
     //   { name: 'Test Suite' }
     // ]
   ],
-
   use: {
     headless: process.env.HEADLESS === "true",
     viewport: { width: 1280, height: 720 },
