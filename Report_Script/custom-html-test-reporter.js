@@ -23,7 +23,7 @@ class CustomHtmlReporter {
     });
   }
 
-  onEnd(result) {
+  onEnd() {
     const html = this.generateHtml();
     const path = "reports";
 
