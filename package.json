@@ -20,8 +20,9 @@
     "test:report": "node Report_Script/json-to-html-report.js",
     "prepare": "husky",
     "test:youtube:dev": "cross-env ENV=dev APP=youtube npx playwright test",
-    "test:youtube:qa": "cross-env ENV=qa APP=youtube npx playwright test",
-    "test:youtube:prod": "cross-env ENV=prod APP=youtube npx playwright test"
+    "test:youtube:qa":"node ./export-cookies.js && cross-env ENV=qa APP=youtube npx playwright test",
+    "test:youtube:prod": "cross-env ENV=prod APP=youtube npx playwright test",
+    "test:youtube:auth-setup": "cross-env ENV=dev APP=youtube npx playwright test auth-setup.spec.js --headed"
   },
   "keywords": [],
   "author": "",
@@ -46,6 +47,7 @@
   "dependencies": {
     "@axe-core/playwright": "^4.10.2",
     "axe-core": "^4.10.3",
+    "chrome-cookies-secure": "^3.0.0",
     "grep": "^0.1.0",
     "playwright-extra": "^4.3.6"
   },

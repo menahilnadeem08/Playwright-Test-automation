@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig } from "@playwright/test";
 import * as dotenv from "dotenv";
 import { config as apps } from "./config/apps.config.js";
 
@@ -50,17 +50,15 @@ module.exports = defineConfig({
         open: "never",
       },
     ],
-    // [
-    //   '@artilleryio/playwright-reporter',
-    //   { name: 'Test Suite' }
-    // ]
+    ["@artilleryio/playwright-reporter", { name: "Test Suite" }],
   ],
   use: {
     headless: process.env.HEADLESS === "true",
     viewport: { width: 1280, height: 720 },
     actionTimeout: 10 * 1000, // Max time for each Playwright action
-    screenshot: "only-on-failure",
-    video: "retain-on-failure",
+    // screenshot: "only-on-failure",
+    screenshot: "on",
+    video: "on",
     trace: "retain-on-failure",
     baseURL,
     userAgent:

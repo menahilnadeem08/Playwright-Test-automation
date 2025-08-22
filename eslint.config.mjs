@@ -11,15 +11,15 @@ export default [
       'test-results'
     ]
   },
-  // Base JS rules (works for both import/export and require)
+  // Base JS rules
   {
     files: ['**/*.js'],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
       globals: {
-        ...globals.node,     // Node.js globals
-        ...globals.browser   // Browser globals (if needed)
+        ...globals.node,
+        ...globals.browser
       }
     },
     plugins: {
@@ -31,7 +31,14 @@ export default [
       'eqeqeq': 'error',
       'curly': 'error',
       'semi': ['warn', 'always'],
-      'quotes': ['warn', 'single']
+      'quotes': 'off'   // 🚫 ignore quote style
+    }
+  },
+  // JSON override (also ignore quotes here)
+  {
+    files: ['**/*.json'],
+    rules: {
+      'quotes': 'off'
     }
   },
   // Playwright test rules
@@ -43,7 +50,7 @@ export default [
       globals: {
         ...globals.node,
         ...globals.browser,
-        ...globals.jest, // for test globals if needed
+        ...globals.jest,
         test: 'readonly',
         expect: 'readonly'
       }
@@ -52,7 +59,7 @@ export default [
       playwright
     },
     rules: {
-      ...playwright.configs.recommended.rules // Only copy rules, not env
+      ...playwright.configs.recommended.rules
     }
   }
 ];

@@ -1,4 +1,3 @@
-
 /**
  * Description placeholder
  *
@@ -13,28 +12,28 @@ export class BasePage {
   async navigate(url) {
     await this.page.goto(url, {
       timeout: 600000,
-      waitUntil: 'domcontentloaded'
+      waitUntil: "domcontentloaded",
     });
   }
   async hideDynamic(...selectors) {
     for (const s of selectors) {
       const locator = this.page.locator(s);
       await locator.evaluateAll((els) => {
-        els.forEach(el => {
-          el.style.visibility = 'hidden';
-          el.style.animation = 'none';
+        els.forEach((el) => {
+          el.style.visibility = "hidden";
+          el.style.animation = "none";
         });
       });
     }
   }
 
-
   async click(locator) {
     await this.page.locator(locator).click();
   }
-
   async type(locator, text) {
-    await this.page.locator(locator).fill(text);
+    const target =
+      typeof locator === "string" ? this.page.locator(locator) : locator;
+    await target.fill(text);
   }
 
   async getText(locator) {
@@ -48,12 +47,14 @@ export class BasePage {
   async selectOption(locator, value) {
     await this.page.locator(locator).selectOption(value);
   }
-  async waitForSelector(selector) {
-    await this.page.waitForSelector(selector);
+  async waitForSelector(selector, opts = {}) {
+    const { state = "visible", timeout } = opts;
+    const locator =
+      typeof selector === "string" ? this.page.locator(selector) : selector;
+    await locator.first().waitFor({ state, timeout });
   }
 
   async getText(selector) {
     return await this.page.textContent(selector);
   }
-
 }

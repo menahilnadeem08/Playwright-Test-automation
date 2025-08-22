@@ -12,8 +12,8 @@ export const config = {
     prod: { baseURL: "https://demo.opencart.com/" },
   },
   youtube: {
-    dev: { baseURL: "https://studio.youtube.com/" },
-    qa: { baseURL: "https://studio.youtube.com/" },
-    prod: { baseURL: "https://studio.youtube.com/" },
+    dev: { baseURL: "https://youtube.com/" },
+    qa: { baseURL: "https://youtube.com/" },
+    prod: { baseURL: "https://youtube.com/" },
   },
 };
